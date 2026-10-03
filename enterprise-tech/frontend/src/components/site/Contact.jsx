@@ -5,7 +5,7 @@ import { Mail, Phone, MapPin, Linkedin, Loader2, Send } from "lucide-react";
 import { SERVICES, CONTACT } from "../../data/content";
 import { SectionHead, Reveal } from "./Reveal";
 
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+const API = `${import.meta.env.VITE_BACKEND_URL || "http://localhost:8001"}/api`;
 const EMPTY = { name: "", company: "", email: "", phone: "", service: "", message: "" };
 const input = "w-full rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3.5 text-sm text-white placeholder:text-slate-500 outline-none transition-[border-color,background-color] focus:border-cyan-300/60 focus:bg-white/[0.06]";
 
